@@ -1,0 +1,4 @@
+.DS_Store
+learning_logs/__pycache__
+learning_logs/migrations/__pycache__/
+ll_project/__pycache__/
