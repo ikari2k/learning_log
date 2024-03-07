@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
 
-from .models import Topic
+from .models import Entry, Topic
 from .forms import TopicForm, EntryForm
 
 
@@ -62,3 +62,24 @@ def new_entry(request, topic_id):
     # Display empty form
     context = {"topic": topic, "form": form}
     return render(request, "learning_logs/new_entry.html", context)
+
+
+def edit_entry(request, entry_id):
+    """Edit entry"""
+    entry = Entry.objects.get(id=entry_id)
+    topic = entry.topic
+
+    if request.method != "POST":
+        # No data was passed, showing existing data in the form
+        form = EntryForm(instance=entry)
+    else:
+        # Data sent by POST, let's process them
+        form = EntryForm(instance=entry, data=request.POST)
+        if form.is_valid():
+            form.save()
+            # Return to topics page after successful save
+            return redirect("learning_logs:topic", topic_id=topic.id)
+
+    # Display empty form
+    context = {"entry": entry, "topic": topic, "form": form}
+    return render(request, "learning_logs/edit_entry.html", context)
