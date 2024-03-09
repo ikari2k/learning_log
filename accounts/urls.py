@@ -7,5 +7,5 @@ from . import views
 app_name = "accounts"
 urlpatterns = [
     path("", include("django.contrib.auth.urls")),
-    url("register/", views.register, name="register"),
+    path("register/", views.register, name="register"),
 ]
