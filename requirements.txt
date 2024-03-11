@@ -1,0 +1,13 @@
+asgiref==3.7.2
+blessed==1.20.0
+Django==5.0.3
+django-bootstrap5==23.4
+enlighten==1.12.4
+nsz==4.6.1
+platformshconfig==2.4.0
+prefixed==0.7.0
+pycryptodome==3.20.0
+six==1.16.0
+sqlparse==0.4.4
+wcwidth==0.2.13
+zstandard==0.22.0
