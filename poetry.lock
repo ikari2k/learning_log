@@ -49,6 +49,17 @@ files = [
 Django = ">=3.2"
 
 [[package]]
+name = "platformshconfig"
+version = "2.4.0"
+description = "Small helper to access Platform.sh environment variables."
+optional = false
+python-versions = "*"
+files = [
+    {file = "platformshconfig-2.4.0-py3-none-any.whl", hash = "sha256:ff1e29719d2789f6d164e1abd42dbecec1c535e5e741161ba177cec34bfdd6de"},
+    {file = "platformshconfig-2.4.0.tar.gz", hash = "sha256:3eb95a514de57ce3341690fd3e0a61e6fa8c858a0793810a29fcce40691254a2"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.4.4"
 description = "A non-validating SQL parser."
@@ -78,4 +89,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d8435b0aa69517046ac878c9131dded93fe0933c9463f6b64642c37156c11358"
+content-hash = "da8dbc6d10742f78adea5b3398dad03eb342b99cf6243364089b0ca84f586783"
